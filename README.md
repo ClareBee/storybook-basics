@@ -100,3 +100,19 @@ Register addons in `.storybook/addons.js` (order matters)
 **Knobs** - makes it interactive (can accept different input types from user, e.g. object - useful for testing edge cases too!)
 
 > the object knob type accepts a label and a default object as parameters. The label is constant and shows up to the left of a text field in your addons panel. The object you've passed will be represented as an editable JSON blob. As long as you submit valid JSON, your component will adjust based upon the data being passed to the object!
+
+### Creating Addons
+- register in .storybook/addons.js
+- include in .storybook/addons/filename.js
+
+e.g. via
+`yarn add @storybook/api @storybook/components @storybook/theming @babel/preset-react`
+
+Fromm "@storybook/api":
+`.addParameters();` - inject custom parameters into stories
+`.useStorybookState();`
+`.useAddonState();` - persists local state
+
+From "@storybook/components":
+AddonPanel - to display
+ActionBar - to change between items

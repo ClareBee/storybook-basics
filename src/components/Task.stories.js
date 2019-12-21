@@ -24,6 +24,12 @@ const longTitle = `This task's name is absurdly large. In fact, I think if I kee
 // three test states of Task
 storiesOf('Task', module)
   .addDecorator(withKnobs)
+  .addParameters({
+    assets: [
+      "assets/app.png",
+      "assets/items.png"
+    ]
+  })
   .add('default', () => {
      return <Task task={object('task', { ...task })} {...actions} />;
    }) // integrates object knob type
