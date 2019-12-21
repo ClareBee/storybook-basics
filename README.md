@@ -1,5 +1,7 @@
 https://clarebee.github.io/storybook-basics
 
+<img src="https://github.com/ClareBee/storybook-basics/blob/master/screenshot.jpg" alt="screenshot">
+
 *This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).*
 
 From:
