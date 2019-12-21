@@ -1,7 +1,8 @@
+https://clarebee.github.io/storybook-basics
 
+*This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).*
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+From:
 https://www.learnstorybook.com/intro-to-storybook/react/en/get-started/
 
 ```
@@ -94,6 +95,7 @@ From website:
 ### Addons
 
 - https://storybook.js.org/docs/addons/addon-gallery/
+- https://github.com/storybookjs/storybook/tree/next/dev-kits
 
 Register addons in `.storybook/addons.js` (order matters)
 
@@ -116,3 +118,23 @@ Fromm "@storybook/api":
 From "@storybook/components":
 AddonPanel - to display
 ActionBar - to change between items
+
+### Deploying
+>To deploy Storybook we first need to export it as a static web app. This functionality is already built into Storybook, we just need to activate it by adding a script to package.json.
+
+```json
+{
+  "scripts": {
+    "build-storybook": "build-storybook -c .storybook"
+  }
+}
+```
+#### Static App
+e.g. w Github + https://github.com/storybookjs/storybook-deployer
+
+#### CI
+e.g. w Netlify
+
+
+### Resources
+- [Workflow advice](https://blog.hichroma.com/the-delightful-storybook-workflow-b322b76fd07)
