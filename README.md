@@ -81,3 +81,22 @@ configure(loadStories, module);
 - for details e.g. order of rendering in DOM
 - elements from stories can be reused in tests
 - prefer snapshots/visual regression for UI as less brittle than Unit tests?
+
+
+### Testing UI
+
+From website:
+- **Visual tests** rely on developers to manually look at a component to verify it for correctness. They help us sanity check a component’s appearance as we build.
+- **Snapshot tests with Storyshots** capture a component’s rendered markup. They help us stay abreast of markup changes that cause rendering errors and warnings.
+- **Unit tests with Jest** verify that the output of a component remains the same given an fixed input. They’re great for testing the functional qualities of a component.
+- **Visual Regression tests** to catch changes in appearance, e.g. via Chromatic addon.
+
+### Addons
+
+- https://storybook.js.org/docs/addons/addon-gallery/
+
+Register addons in `.storybook/addons.js` (order matters)
+
+**Knobs** - makes it interactive (can accept different input types from user, e.g. object - useful for testing edge cases too!)
+
+> the object knob type accepts a label and a default object as parameters. The label is constant and shows up to the left of a text field in your addons panel. The object you've passed will be represented as an editable JSON blob. As long as you submit valid JSON, your component will adjust based upon the data being passed to the object!
