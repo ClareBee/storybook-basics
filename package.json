@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/preset-react": "^7.7.4",
     "@storybook/addon-knobs": "^5.2.8",
+    "@storybook/api": "^5.2.8",
+    "@storybook/components": "^5.2.8",
+    "@storybook/theming": "^5.2.8",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
