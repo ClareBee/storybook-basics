@@ -35,3 +35,40 @@ yarn start
 - `add()` - called once per test state, and generates a story
 
 > The action story is a function that returns a rendered element (i.e. a component class with a set of props) in a given state---exactly like a React Stateless Functional Component.
+
+----
+### Storyshots
+> Snapshot testing refers to the practice of recording the “known good” output of a component for a given input and then flagging the component whenever the output changes in future.
+
+`yarn add --dev @storybook/addon-storyshots react-test-renderer require-context.macro`
+`yarn add --dev babel-plugin-macros`
+```
+// .babelrc
+
+{
+  "plugins": ["macros"]
+}
+```
+```javascript
+// src/storybook.test.js
+
+import initStoryshots from '@storybook/addon-storyshots';
+initStoryshots();
+```
+
+```javascript
+// .storybook/config.js
+
+import { configure } from '@storybook/react';
+import requireContext from 'require-context.macro';
+
+import '../src/index.css';
+
+const req = requireContext('../src/components', true, /\.stories\.js$/);
+
+function loadStories() {
+  req.keys().forEach(filename => req(filename));
+}
+
+configure(loadStories, module);
+```
