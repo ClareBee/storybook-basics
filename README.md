@@ -72,3 +72,6 @@ function loadStories() {
 
 configure(loadStories, module);
 ```
+---
+### Decorators
+>Decorators (`addDecorator()`) are a way to provide arbitrary wrappers to stories. [...] They can also be used to wrap stories in “providers” –i.e. library components that set React context.
