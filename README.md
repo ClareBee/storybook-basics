@@ -75,3 +75,9 @@ configure(loadStories, module);
 ---
 ### Decorators
 >Decorators (`addDecorator()`) are a way to provide arbitrary wrappers to stories. [...] They can also be used to wrap stories in “providers” –i.e. library components that set React context.
+---
+
+### Unit tests w Jest & test renderer Enzyme
+- for details e.g. order of rendering in DOM
+- elements from stories can be reused in tests
+- prefer snapshots/visual regression for UI as less brittle than Unit tests?
