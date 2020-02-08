@@ -187,3 +187,8 @@ yarn add --dev  @storybook/addon-storysource
 
 - **knobs addon** -> dynamic interaction w component props
 NB  >knobs don’t replace stories. Knobs are great for exploring the edge cases of the components. Stories are used for showcasing the intended cases.
+
+
+### Review with Teams
+- Design system as single source of truth/single point of failure
+- CircleCI for Continuous Integration
